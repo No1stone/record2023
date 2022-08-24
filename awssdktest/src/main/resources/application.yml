@@ -1,0 +1,10 @@
+
+cloud:
+  aws:
+    credentials:
+      accessKey:
+      secretKey:
+      region: ap-northeast-2
+    smtp:
+      region: email-smtp.us-east-1
+    devmail: dev@email.com
