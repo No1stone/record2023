@@ -18,6 +18,4 @@ public class RedisMessgeStringSubscriber implements MessageListener {
         log.info("Redis Subscriber -{}", new Gson().toJson(message));
         log.info("Redis Subscriber -{}", message.toString());
     }
-
-
 }
