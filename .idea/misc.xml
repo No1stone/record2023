@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/ControllerAdvice" />
     <file type="web" url="file://$PROJECT_DIR$/FluxDemo" />
+    <file type="web" url="file://$PROJECT_DIR$/mybatisjpadslmulticonnect" />
     <file type="web" url="file://$PROJECT_DIR$/redisInitTest" />
     <file type="web" url="file://$PROJECT_DIR$/redisInitTestPub" />
     <file type="web" url="file://$PROJECT_DIR$/RefreshToken" />
