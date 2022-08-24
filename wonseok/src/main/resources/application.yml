@@ -1,0 +1,61 @@
+
+
+server:
+  host: localhost
+  port: 8520
+
+swagger:
+  url: /swagger-ui/index.html#
+#PostGresql info
+spring:
+  datasource:
+    #    url: jdbc:log4jdbc:postgresql://ws.uinetworks.kr:54344/sparwk_local
+    #    username: sparwk_local_user
+    #    password: sparwk_local_user
+#    url: jdbc:log4jdbc:postgresql://52.78.232.32:5432/sparwkdb
+    url: jdbc:postgresql://52.78.232.32:5432/sparwkdb
+    username: sparwk_usr01
+    password: sparwk_usr01
+    driver-class-name: org.postgresql.Driver
+    hikari.connection-timeout: 60000
+    hikari.maximum-pool-size: 2
+  # Hibernate
+  jpa:
+    properties:
+      hibernate:
+        default_batch_fetch_size: 1000
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+        ddl-auto: none
+        #ddl-auto: create
+        #ddl-auto: create-drop
+        #ddl-auto: update
+        #        ddl-auto: validate
+        show_sql: true
+        format_sql: true
+  #        sql: true
+  #        use_sql_comments: true
+
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+#table create config
+#spring.jpa.properties.hibernate.hbm2ddl.auto = none
+#logging.level.org.hibernate.type.descriptor.sql=trace
+#logging.level.org.hibernate.type.descriptor.sql.BasicBinder=trace
+#logging.level.org.hibernate.sql=debug
+#logging.level.org.hibernate.engine.query.spi.sql.NativeSQLQueryReturn=trace
+#logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type: trace
+security:
+  jwt:
+    token:
+      secret-key: SparwkCreaterP@ssWordSecuritydnjstjrdlrkaksemsxhzmsdlqslekdkssudgktpdy
+      expire-length: 3600000
+
