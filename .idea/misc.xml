@@ -7,6 +7,7 @@
     <file type="web" url="file://$PROJECT_DIR$/redisInitTest" />
     <file type="web" url="file://$PROJECT_DIR$/redisInitTestPub" />
     <file type="web" url="file://$PROJECT_DIR$/RefreshToken" />
+    <file type="web" url="file://$PROJECT_DIR$/SseEmitter" />
     <file type="web" url="file://$PROJECT_DIR$/wonseok" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="11" project-jdk-type="JavaSDK">
