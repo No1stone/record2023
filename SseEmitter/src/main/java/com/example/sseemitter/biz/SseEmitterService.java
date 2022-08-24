@@ -15,6 +15,9 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class SseEmitterService {
 
+    /**
+    맵을 통해 유니캐스트 구현
+     */
     private Map<Long, SseEmitter> emiterMap = new HashMap<>();
 
     public SseEmitter SseEmitter(Long seq) {
