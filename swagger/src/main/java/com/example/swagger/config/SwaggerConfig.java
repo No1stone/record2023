@@ -20,7 +20,13 @@ import java.util.function.Predicate;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
-//    https://springfox.github.io/springfox/docs/current/#gradle
+
+    /**
+     *  공식문서 세팅방법
+     *  https://springfox.github.io/springfox/docs/current/#gradle
+     *
+     */
+//
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)//
