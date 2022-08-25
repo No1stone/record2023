@@ -18,12 +18,14 @@ services:
       - default
       - postgresql-net
 
+#6379 포트는 그냥도커 빌드해놈.
+
   redis1:
     container_name: redis1
     image: redis:latest
     restart: always
     ports:
-      - 6380:6380
+      - 6380:6379
     volumes:
       - /var/lib/redis1/data
     networks:
