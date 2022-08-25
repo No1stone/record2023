@@ -2,6 +2,7 @@ version: "3.7"
 
 services:
 
+
   postgresql:
     container_name: postgresql
     image: postgres:latest
@@ -12,13 +13,15 @@ services:
       POSTGRES_DB: local
       POSTGRES_USER: user_me
       POSTGRES_PASSWORD: user_me
+
     volumes:
       - /var/lib/postgresql/data
     networks:
       - default
       - postgresql-net
 
-#6379 포트는 그냥도커 빌드해놈.
+
+#6379 포트는 그냥도커로 빌드해놈.
 
   redis1:
     container_name: redis1
@@ -31,6 +34,8 @@ services:
     networks:
       - default
       - redis1-net
+    environment:
+      - TZ=Asia/Seoul
 
 networks:
   postgresql-net:
