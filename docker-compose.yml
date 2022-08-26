@@ -47,8 +47,8 @@ services:
     expose:
       - 8080
       - 50000
-    volumes:
-      - ./jenkins_home:/var/jenkins_home
+#    volumes:
+#      - ./jenkins_home:/var/jenkins_home
 #      - /var/run/docker.sock:/var/run/docker.sock
 #      - C:\Program Files (x86)\jdk-11\lib\security\jenkins_home:/var/jenkins_home
     networks:
@@ -56,7 +56,7 @@ services:
       - jenkins-net
     user: root
     environment:
-      TZ: "Asiz/Seoul"
+      TZ: Asia/Seoul
     privileged: true
     #https://hub.docker.com/r/jenkins/jenkins
 
