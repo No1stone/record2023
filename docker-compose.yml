@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3"
 
 services:
 
@@ -37,6 +37,28 @@ services:
     environment:
       - TZ=Asia/Seoul
 
+  jenkins:
+    container_name: jenkinslocal
+    image: jenkins/jenkins:jdk11
+    restart: always
+    ports:
+      - 7999:8080
+      - 50000:50000
+    expose:
+      - 8080
+      - 50000
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+#      - /var/run/docker.sock:/var/run/docker.sock
+#      - C:\Program Files (x86)\jdk-11\lib\security\jenkins_home:/var/jenkins_home
+    networks:
+      - default
+      - jenkins-net
+    user: root
+    environment:
+      TZ: "Asiz/Seoul"
+    privileged: true
+    #https://hub.docker.com/r/jenkins/jenkins
 
 
 networks:
@@ -44,3 +66,8 @@ networks:
     driver: bridge
   redis1-net:
     driver: bridge
+  jenkins-net:
+    driver: bridge
+
+#volumes:
+#  jenkinsvol:

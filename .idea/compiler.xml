@@ -9,6 +9,13 @@
         </processorPath>
         <module name="swagger.main" />
       </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jenkins-war (2) (org.jenkins-ci.main)" />
+        <module name="jenkins-war (1)" />
+      </profile>
     </annotationProcessing>
   </component>
 </project>
