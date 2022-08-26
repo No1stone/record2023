@@ -13,7 +13,7 @@ services:
       POSTGRES_DB: local
       POSTGRES_USER: user_me
       POSTGRES_PASSWORD: user_me
-
+      TZ: Asia/Seoul
     volumes:
       - /var/lib/postgresql/data
     networks:
@@ -35,7 +35,7 @@ services:
       - default
       - redis1-net
     environment:
-      - TZ=Asia/Seoul
+      TZ: Asia/Seoul
 
   jenkins:
     container_name: jenkinslocal
