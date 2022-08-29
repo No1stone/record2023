@@ -1,0 +1,19 @@
+seoul:
+  open:
+    usekey: 4d425862476a616e343467434c4f50
+gonggong:
+  data:
+    usekey: 0K4Oa1B8HMxWjZqMb8Iea9scmWEyZBAlV8IcsQVsBriDgcYtNj60ahAqVbDf0PGkhuXVDPJEOgp5ixvTl2ZSBg%3D%3D
+
+server:
+  port: 8201
+
+
+#DB 접근 정보
+spring:
+  datasource:
+    driverClassName: com.tmax.tibero.jdbc.TbDriver
+    url: jdbc:tibero:thin:@ws.uinetworks.kr:3391:gtpadb
+    username: CHATBOT
+    password: CHATBOT
+
