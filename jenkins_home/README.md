@@ -4,3 +4,5 @@ JDK를 못찾아서.. 한참해멨다..
 
 공식문서 찾아보니 태그로 jdk11을 넘겨줘야햇던것.
 볼륨도 해제하고 다시 커밋
+
+https://www.notion.so/jenkins-setting-595bdc54caa64b85a5deffa06de87125
