@@ -21,10 +21,10 @@ public class SseEmitterController {
         return sseEmitterService.SseEmitter(seq);
     }
 
-    @GetMapping(path = "/test38/{seq}")
-    public void test38(@PathVariable(name = "seq") Long seq) {
+    @GetMapping(path = "/test38/{seq}/{data}")
+    public void test38(@PathVariable(name = "seq") Long seq, @PathVariable(name = "data")String data) {
         log.info("data - {} , {}", seq);
-        sseEmitterService.sendToSseEmitter(seq, "");
+        sseEmitterService.sendToSseEmitter(seq, data);
     }
 
 }
