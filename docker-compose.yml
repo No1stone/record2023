@@ -57,7 +57,7 @@ services:
       - jenkins-net
     user: root
     environment:
-      TZ: Asia/Seoul
+      TZ: "Asia/Seoul"
     privileged: true
     #https://hub.docker.com/r/jenkins/jenkins
 

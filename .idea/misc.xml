@@ -8,9 +8,11 @@
     <file type="web" url="file://$PROJECT_DIR$/FluxDemo" />
     <file type="web" url="file://$PROJECT_DIR$/jenkins_home/war/META-INF/maven/org.jenkins-ci.main/jenkins-war" />
     <file type="web" url="file://$PROJECT_DIR$/mybatisjpadslmulticonnect" />
+    <file type="web" url="file://$PROJECT_DIR$/NaverBandConnect/band" />
     <file type="web" url="file://$PROJECT_DIR$/redisInitTest" />
     <file type="web" url="file://$PROJECT_DIR$/redisInitTestPub" />
     <file type="web" url="file://$PROJECT_DIR$/RefreshToken" />
+    <file type="web" url="file://$PROJECT_DIR$/SeoulOpenAPI" />
     <file type="web" url="file://$PROJECT_DIR$/SseEmitter" />
     <file type="web" url="file://$PROJECT_DIR$/swagger" />
     <file type="web" url="file://$PROJECT_DIR$/wonseok" />
