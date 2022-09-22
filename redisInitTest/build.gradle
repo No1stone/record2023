@@ -45,6 +45,10 @@ dependencies {
 // https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher
     testImplementation 'org.junit.platform:junit-platform-launcher:1.9.0'
 
+// https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation 'com.google.guava:guava:31.1-jre'
+// https://mvnrepository.com/artifact/org.springframework/spring-context-support
+    implementation 'org.springframework:spring-context-support:5.3.23'
 
 }
 jar {

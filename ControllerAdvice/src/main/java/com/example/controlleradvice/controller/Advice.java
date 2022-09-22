@@ -5,12 +5,9 @@ import com.example.controlleradvice.controller.cus.cus2;
 import com.example.controlleradvice.controller.cus.cus3;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
-import javax.servlet.http.HttpServlet;
 
 @RestControllerAdvice
 public class Advice {
@@ -23,7 +20,7 @@ public class Advice {
 
 
     @ExceptionHandler
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.OK)
     public ErrorResult ex2 (cus1 e){
         ErrorResult er = new ErrorResult("cus1", e.getMessage());
 //        return new ResponseEntity(er, HttpStatus.BAD_REQUEST);
@@ -39,8 +36,9 @@ public class Advice {
     @ExceptionHandler
     public ResponseEntity ex4 (cus3 e){
         ErrorResult er = new ErrorResult("cus3", e.getMessage());
-        return new ResponseEntity(er, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity(er, HttpStatus.NOT_FOUND);
     }
+
 
 
 }

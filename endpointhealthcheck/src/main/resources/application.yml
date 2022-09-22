@@ -1,8 +1,8 @@
 management:
   endpoint:
     web:
-      exposure:
-        include: health,info
-
+#      exposure:
+#        include: health,info
+      base-path: /manage # default actiator -> ?? /manage
 server:
   port: 8012

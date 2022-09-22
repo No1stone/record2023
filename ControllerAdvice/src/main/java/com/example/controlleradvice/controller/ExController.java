@@ -3,6 +3,8 @@ package com.example.controlleradvice.controller;
 import com.example.controlleradvice.controller.cus.cus1;
 import com.example.controlleradvice.controller.cus.cus2;
 import com.example.controlleradvice.controller.cus.cus3;
+import com.example.controlleradvice.controller.cus.cus5;
+import com.example.controlleradvice.controller.testvo.VoRe;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -33,7 +35,18 @@ public class ExController {
         if(ex.equals("ex4")){
             throw new cus3();
         }
+        if(ex.equals("ex5")){
+            throw new cus5();
+        }
 
+    }
+
+    @GetMapping(path = "/test2")
+    public void test2(VoRe voRe){
+    log.info("a {}", voRe.getA());
+    log.info("a {}", voRe.getB());
+    log.info("a {}", voRe.getC());
+    log.info("a {}", voRe.getD());
     }
 
 }
