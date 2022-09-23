@@ -7,12 +7,15 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
+import javax.servlet.http.HttpServletRequest;
+
 @RestController
 @Slf4j
 @RequiredArgsConstructor
 public class SseEmitterController {
 
     private final SseEmitterService sseEmitterService;
+    private final HttpServletRequest httpServletRequest;
 
     @GetMapping(path = "/test37/{seq}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public SseEmitter test37(@PathVariable(name = "seq") Long seq) {
@@ -36,6 +39,13 @@ public class SseEmitterController {
     public String test2Datareturn(@RequestBody TestBody testBody){
         log.info("request data - {}", new Gson().toJson(testBody));
         return "SseReturn2";
+    }
+
+    @GetMapping(path = "/test3")
+    public void test3(){
+
+       Object seesion =  httpServletRequest.getSession();
+       log.info("session - {}", new Gson().toJson(seesion));
     }
 
 
