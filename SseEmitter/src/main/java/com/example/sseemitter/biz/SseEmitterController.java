@@ -1,12 +1,10 @@
 package com.example.sseemitter.biz;
 
+import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 @RestController
@@ -32,6 +30,12 @@ public class SseEmitterController {
     public String test1Datareturn(@RequestParam(name = "a")String a){
         log.info("request data - {}", a);
         return "SseReturn";
+    }
+
+    @PostMapping(path = "/test2")
+    public String test2Datareturn(@RequestBody TestBody testBody){
+        log.info("request data - {}", new Gson().toJson(testBody));
+        return "SseReturn2";
     }
 
 
