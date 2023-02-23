@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.*;
+import java.util.regex.Matcher;
+import java.util.stream.Collectors;
 
 public class FunctionWsNashorn {
 
@@ -27,12 +29,13 @@ public class FunctionWsNashorn {
 
     public static FunctionWsNashorn builder(int timeMilli) throws ExecutionException, InterruptedException, TimeoutException {
         int time = 5000;
-        if(timeMilli > 0 && timeMilli < time) time = timeMilli;
+        if (timeMilli > 0 && timeMilli < time) time = timeMilli;
         return Executors.newSingleThreadExecutor().submit(FunctionWsNashorn::new).get(time, TimeUnit.MILLISECONDS);
     }
 
-
-    public FunctionWsNashorn create(FunctionVo dto){
+    public FunctionWsNashorn create(FunctionVo dto) {
+        if (dto.getInitCode().length() > 5) throw new IllegalArgumentException();
+        if (dto.getInitParam().size() > 1) throw new IllegalArgumentException();
         this.param = dto.getInitParam();
         this.code = dto.getInitCode();
         return this;
@@ -42,5 +45,9 @@ public class FunctionWsNashorn {
         return result;
     }
 
+    public FunctionWsNashorn noTag() {
+        if ("<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\s)*(/)?>".matches(this.code)) this.htmlTag = true;
+        return this;
+    }
 
 }
