@@ -3,22 +3,22 @@ version: "3"
 services:
 
 
-  postgresql:
-    container_name: postgresql
-    image: postgres:latest
-    restart: always
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_DB: local
-      POSTGRES_USER: user_me
-      POSTGRES_PASSWORD: user_me
-      TZ: Asia/Seoul
-    volumes:
-      - /var/lib/postgresql/data
-    networks:
-      - default
-      - postgresql-net
+#  postgresql:
+#    container_name: postgresql
+#    image: postgres:latest
+#    restart: always
+#    ports:
+#      - 5432:5432
+#    environment:
+#      POSTGRES_DB: local
+#      POSTGRES_USER: user_me
+#      POSTGRES_PASSWORD: user_me
+#      TZ: Asia/Seoul
+#    volumes:
+#      - /var/lib/postgresql/data
+#    networks:
+#      - default
+#      - postgresql-net
 
 
 #6379 포트는 그냥도커로 빌드해놈.
@@ -63,8 +63,8 @@ services:
 
 
 networks:
-  postgresql-net:
-    driver: bridge
+#  postgresql-net:
+#    driver: bridge
   redis1-net:
     driver: bridge
   jenkins-net:

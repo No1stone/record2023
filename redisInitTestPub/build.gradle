@@ -36,13 +36,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'org.json:json:20210307'
 
-// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
-    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
-// https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine
     testImplementation 'org.junit.vintage:junit-vintage-engine:5.9.0'
-// https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher
     testImplementation 'org.junit.platform:junit-platform-launcher:1.9.0'
 
 

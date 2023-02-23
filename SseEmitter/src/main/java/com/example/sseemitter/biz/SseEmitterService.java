@@ -28,7 +28,7 @@ public class SseEmitterService {
     }
 
     public void sendToSseEmitter(Long seq, String data) {
-        data = "aaaasssss";
+//        data = "dat";
         SseEmitter emitter = emiterMap.get(seq);
         try {
             emitter.send(
