@@ -20,4 +20,9 @@ public class TestController {
         testService.test1();
     }
 
+
+    @GetMapping("/test2")
+    public void test2() throws ExecutionException, InterruptedException, TimeoutException {
+        testService.test2();
+    }
 }

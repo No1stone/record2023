@@ -1,11 +1,15 @@
 package com.example.futurenashorn.biz;
 
+import com.example.futurenashorn.biz.functionwsnashornpack.FunctionVo;
+import com.example.futurenashorn.biz.functionwsnashornpack.FunctionWsNashorn;
 import jdk.nashorn.api.scripting.NashornScriptEngineFactory;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.script.ScriptEngine;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.*;
 
 @Service
@@ -38,4 +42,13 @@ public class TestService {
         return "";
     }
 
+    public void test2() throws ExecutionException, InterruptedException, TimeoutException {
+
+        Map data =  new HashMap<>();
+        data.put("param1","value1");
+//        String initCode = "a=1";
+//        String initCode = "<p><div>asdasd</div>";
+        String initCode = "a=1 b=2 c=3";
+        FunctionWsNashorn.builder(5000).create(FunctionVo.builder().initParam((HashMap) data).initCode(initCode).build()).noTag().build();
+    }
 }
