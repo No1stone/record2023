@@ -1,12 +1,15 @@
-package com.example.futurenashorn.biz.nas;
+package com.example.futurenashorn.biz.functionwsnashornpack;
+
+import com.example.futurenashorn.biz.functionwsnashornpack.ex.WsNotAvailableException;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.*;
-import java.util.regex.Matcher;
-import java.util.stream.Collectors;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class FunctionWsNashorn {
 
@@ -46,7 +49,7 @@ public class FunctionWsNashorn {
     }
 
     public FunctionWsNashorn noTag() {
-        if ("<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\s)*(/)?>".matches(this.code)) this.htmlTag = true;
+        if ("<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\s)*(/)?>".matches(this.code)) throw new WsNotAvailableException();
         return this;
     }
 

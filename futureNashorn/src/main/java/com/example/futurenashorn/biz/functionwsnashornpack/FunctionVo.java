@@ -1,4 +1,4 @@
-package com.example.futurenashorn.biz.nas;
+package com.example.futurenashorn.biz.functionwsnashornpack;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

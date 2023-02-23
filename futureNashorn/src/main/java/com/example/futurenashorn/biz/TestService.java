@@ -1,6 +1,5 @@
 package com.example.futurenashorn.biz;
 
-import com.example.futurenashorn.biz.nas.FunctionWsNashorn;
 import jdk.nashorn.api.scripting.NashornScriptEngineFactory;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
