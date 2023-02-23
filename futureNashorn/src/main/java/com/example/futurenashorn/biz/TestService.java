@@ -1,9 +1,11 @@
 package com.example.futurenashorn.biz;
 
+import jdk.nashorn.api.scripting.NashornScriptEngineFactory;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import javax.script.ScriptEngine;
 import java.util.concurrent.*;
 
 @Service
@@ -27,4 +29,13 @@ public class TestService {
         log.info("timeout out");
         return "sleep5second";
     }
+
+    private String Nasgorn(){
+        ScriptEngine se = new NashornScriptEngineFactory().getScriptEngine();
+
+//        se.eval();
+
+        return "";
+    }
+
 }
