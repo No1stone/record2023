@@ -1,5 +1,6 @@
 package com.example.futurenashorn.biz;
 
+import com.example.futurenashorn.biz.nas.FunctionWsNashorn;
 import jdk.nashorn.api.scripting.NashornScriptEngineFactory;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -30,11 +31,11 @@ public class TestService {
         return "sleep5second";
     }
 
-    private String Nasgorn(){
+    private String Nasgorn() throws ExecutionException, InterruptedException, TimeoutException {
         ScriptEngine se = new NashornScriptEngineFactory().getScriptEngine();
 
 //        se.eval();
-
+//        FunctionWsNashorn.builder(6000).create().build();
         return "";
     }
 
