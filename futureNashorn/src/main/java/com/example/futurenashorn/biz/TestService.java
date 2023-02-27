@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.script.ScriptEngine;
+import javax.script.ScriptException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.*;
@@ -34,21 +35,43 @@ public class TestService {
         return "sleep5second";
     }
 
-    private String Nasgorn() throws ExecutionException, InterruptedException, TimeoutException {
+    public String Nasgorn() throws ExecutionException, InterruptedException, TimeoutException, ScriptException {
         ScriptEngine se = new NashornScriptEngineFactory().getScriptEngine();
+
+        se.put("예약시간1", 1);
+        se.put("예약시간2", 2);
+        se.put("par3", 3);
+        se.put("par4", "par4 = par3 + par3");
+
+        se.eval("예약시간1 = 10");
+        se.eval("예약시간2 = 11");
+        se.eval("par3 = 2");
+        se.eval("par4");
+
+        log.info("par1 - {}", se.get("예약시간1"));
+        log.info("par2 - {}", se.get("예약시간2"));
+        log.info("par3 - {}", se.get("par3"));
+        log.info("par4 - {}", se.get("par4"));
+
 
 //        se.eval();
 //        FunctionWsNashorn.builder(6000).create().build();
         return "";
     }
 
-    public void test2() throws ExecutionException, InterruptedException, TimeoutException {
+    public void test2() throws ExecutionException, InterruptedException, TimeoutException, ScriptException {
 
         Map data =  new HashMap<>();
         data.put("param1","value1");
 //        String initCode = "a=1";
 //        String initCode = "<p><div>asdasd</div>";
         String initCode = "a=1 b=2 c=3";
-        FunctionWsNashorn.builder(5000).create(FunctionVo.builder().initParam((HashMap) data).initCode(initCode).build()).noTag().build();
+        Map result = FunctionWsNashorn
+                .builder(5000)
+                .create(FunctionVo.builder().callData((HashMap) data).initSctipt(initCode).build())
+                .CheckBlackList()
+                .noTag()
+                .build();
+
     }
 }

@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.script.ScriptException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
@@ -18,11 +19,19 @@ public class TestController {
     @GetMapping("/test1")
     public void test1() throws ExecutionException, InterruptedException, TimeoutException {
         testService.test1();
+
     }
 
 
     @GetMapping("/test2")
-    public void test2() throws ExecutionException, InterruptedException, TimeoutException {
+    public void test2() throws ExecutionException, InterruptedException, TimeoutException, ScriptException {
         testService.test2();
     }
+
+    @GetMapping("/test3")
+    public void test3() throws ExecutionException, InterruptedException, TimeoutException, ScriptException {
+        testService.Nasgorn();
+    }
+
+
 }
