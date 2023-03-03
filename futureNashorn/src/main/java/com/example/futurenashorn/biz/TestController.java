@@ -21,7 +21,7 @@ public class TestController {
         testService.test1();
 
     }
-
+/*
 
     @GetMapping("/test2")
     public void test2() throws ExecutionException, InterruptedException, TimeoutException, ScriptException {
@@ -32,6 +32,6 @@ public class TestController {
     public void test3() throws ExecutionException, InterruptedException, TimeoutException, ScriptException {
         testService.Nasgorn();
     }
-
+*/
 
 }
