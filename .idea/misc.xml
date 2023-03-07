@@ -7,6 +7,7 @@
     <file type="web" url="file://$PROJECT_DIR$/boot3java17" />
     <file type="web" url="file://$PROJECT_DIR$/ControllerAdvice" />
     <file type="web" url="file://$PROJECT_DIR$/endpointhealthcheck" />
+    <file type="web" url="file://$PROJECT_DIR$/ExcelCommon" />
     <file type="web" url="file://$PROJECT_DIR$/feignclient" />
     <file type="web" url="file://$PROJECT_DIR$/feignclientConfig" />
     <file type="web" url="file://$PROJECT_DIR$/FluxDemo" />
