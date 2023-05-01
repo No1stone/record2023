@@ -23,7 +23,6 @@ public class SttTextRateControler {
     private final SttTextRateService sttTextRateService;
 
     @PostMapping("/value")
-
     public AnalysisReportVo stringAnalysis(@RequestBody StringAnalysisVo dto) {
         log.info(" stringAnalysis - {} ", new Gson().toJson(dto));
         return sttTextRateService.stringAnalysis(dto);

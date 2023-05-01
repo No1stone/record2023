@@ -56,7 +56,7 @@ public class AnalysisReportVo {
         this.sttAnswerSentence = val.getSttAnswerSentence();
         this.totalCharRate = totalCharRate(val);
         this.totalSentenceRate = totalSentenceRate(val);
-        this.charRate = charRate;
+        this.charRate = charRate(val);
         this.sentenceRate = sentenceRate;
         this.textMeaningRate = textMeaningRate;
     }
@@ -70,6 +70,51 @@ public class AnalysisReportVo {
     private String totalSentenceRate(StringAnalysisVo dto) {
         Long max = Math.max(dto.getAnswerSentence(), dto.getSttAnswerSentence());
         Long min = Math.min(dto.getAnswerSentence(), dto.getSttAnswerSentence());
+        return String.format("%.2f", Math.floor(min) / Math.floor(max) * 100.0) + "%";
+    }
+
+    private String charRate(StringAnalysisVo dto) {
+        String answer = dto.getAnswer().replaceAll(" ","");
+        String sttAnswer = dto.getSttAnswer().replaceAll(" ","");
+        char[] maxChar;
+        char[] minChar;
+        int suc = 0;
+        int fail = 0;
+        int gap = (int) (answer.length() - sttAnswer.length());
+        int flag= 0;
+        System.out.println("gap - " + gap);
+        System.out.println("answer - " + answer);
+        System.out.println("sttAnswer - " + sttAnswer);
+        if (gap > 0) {
+            maxChar = answer.toCharArray();
+            minChar = sttAnswer.toCharArray();
+        } else {
+            maxChar = sttAnswer.toCharArray();
+            minChar = answer.toCharArray();
+            gap = gap * -1;
+        }
+        for (int i = 0; i < minChar.length - 1; i++) {
+            if (minChar[i] == maxChar[i]) {
+                suc += 1;
+                System.out.println("equals - " + minChar[i] + "  " + maxChar[i]);
+            } else {
+                System.out.println("else - " + minChar[i] + "  " + maxChar[i]);
+
+                for (int j = 0; j < gap; j++) {
+                    if (minChar[i] == maxChar[i + j + 1]) {
+                        gap = gap - j + 1;
+                        suc += 1;
+                        continue;
+                    }
+                    fail += 1;
+                }
+            }
+        }
+        fail += gap;
+        System.out.println("suc = " + suc);
+        System.out.println("fail = " + fail);
+        int max = suc + fail;
+        int min = suc;
         return String.format("%.2f", Math.floor(min) / Math.floor(max) * 100.0) + "%";
     }
 
