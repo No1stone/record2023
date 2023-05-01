@@ -74,17 +74,13 @@ public class AnalysisReportVo {
     }
 
     private String charRate(StringAnalysisVo dto) {
-        String answer = dto.getAnswer().replaceAll(" ","");
-        String sttAnswer = dto.getSttAnswer().replaceAll(" ","");
+        String answer = dto.getAnswer().replaceAll(" ", "");
+        String sttAnswer = dto.getSttAnswer().replaceAll(" ", "");
         char[] maxChar;
         char[] minChar;
         int suc = 0;
         int fail = 0;
         int gap = (int) (answer.length() - sttAnswer.length());
-        int flag= 0;
-        System.out.println("gap - " + gap);
-        System.out.println("answer - " + answer);
-        System.out.println("sttAnswer - " + sttAnswer);
         if (gap > 0) {
             maxChar = answer.toCharArray();
             minChar = sttAnswer.toCharArray();
@@ -93,24 +89,27 @@ public class AnalysisReportVo {
             minChar = answer.toCharArray();
             gap = gap * -1;
         }
+        System.out.println("gap - " + gap);
+        System.out.println("maxChar - " + maxChar.toString());
+        System.out.println("minChar - " + minChar.toString());
+        int flag = 0;
         for (int i = 0; i < minChar.length - 1; i++) {
-            if (minChar[i] == maxChar[i]) {
+            if (minChar[i] == maxChar[i - flag]) {
                 suc += 1;
-                System.out.println("equals - " + minChar[i] + "  " + maxChar[i]);
             } else {
-                System.out.println("else - " + minChar[i] + "  " + maxChar[i]);
-
                 for (int j = 0; j < gap; j++) {
-                    if (minChar[i] == maxChar[i + j + 1]) {
-                        gap = gap - j + 1;
+                    if (minChar[i] == maxChar[i - flag + j + 1]) {
+                        System.out.println("---gap - " + gap);
                         suc += 1;
-                        continue;
+                        flag += 1;
+                        break;
                     }
-                    fail += 1;
                 }
             }
         }
         fail += gap;
+        fail -= flag;
+        System.out.println("gap = " + gap);
         System.out.println("suc = " + suc);
         System.out.println("fail = " + fail);
         int max = suc + fail;
