@@ -18,6 +18,7 @@
     <file type="web" url="file://$PROJECT_DIR$/RefreshToken" />
     <file type="web" url="file://$PROJECT_DIR$/SeoulOpenAPI" />
     <file type="web" url="file://$PROJECT_DIR$/SseEmitter" />
+    <file type="web" url="file://$PROJECT_DIR$/stttextrate" />
     <file type="web" url="file://$PROJECT_DIR$/swagger" />
     <file type="web" url="file://$PROJECT_DIR$/wonseok" />
   </component>
@@ -29,7 +30,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
