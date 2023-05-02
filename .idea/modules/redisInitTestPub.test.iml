@@ -110,4 +110,5 @@
     <orderEntry type="library" name="Gradle: org.ow2.asm:asm:9.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.objenesis:objenesis:3.2" level="project" />
   </component>
+  <component name="TestModuleProperties" production-module="redisInitTestPub.main" />
 </module>
