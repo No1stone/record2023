@@ -1,0 +1,16 @@
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+swagger:
+  url: /swagger-ui/index.html#
+
+# swagger-ui custom path
+springdoc:
+  swagger-ui:
+    pat: /swagger-ui.html
+
+
+

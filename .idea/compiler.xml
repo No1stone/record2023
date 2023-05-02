@@ -7,8 +7,70 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.26/8f8cf0372abf564913e9796623aac4c8ea44025a/lombok-1.18.26.jar" />
         </processorPath>
-        <module name="ExcelCommon.main" />
+        <module name="stttextrate.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aspectest" target="11" />
+      <module name="aspectest.main" target="11" />
+      <module name="aspectest.test" target="11" />
+      <module name="awssdktest" target="11" />
+      <module name="awssdktest.main" target="11" />
+      <module name="awssdktest.test" target="11" />
+      <module name="band" target="11" />
+      <module name="band.main" target="11" />
+      <module name="band.test" target="11" />
+      <module name="boot3java17" target="17" />
+      <module name="boot3java17.main" target="17" />
+      <module name="boot3java17.test" target="17" />
+      <module name="ControllerAdvice" target="11" />
+      <module name="ControllerAdvice.main" target="11" />
+      <module name="ControllerAdvice.test" target="11" />
+      <module name="endpointhealthcheck" target="11" />
+      <module name="endpointhealthcheck.main" target="11" />
+      <module name="endpointhealthcheck.test" target="11" />
+      <module name="ExcelCommon" target="17" />
+      <module name="ExcelCommon.main" target="17" />
+      <module name="ExcelCommon.test" target="17" />
+      <module name="feignclient" target="11" />
+      <module name="feignclient.main" target="11" />
+      <module name="feignclient.test" target="11" />
+      <module name="feignclientConfig" target="11" />
+      <module name="feignclientConfig.main" target="11" />
+      <module name="feignclientConfig.test" target="11" />
+      <module name="FluxDemo" target="11" />
+      <module name="FluxDemo.main" target="11" />
+      <module name="FluxDemo.test" target="11" />
+      <module name="futureNashorn" target="11" />
+      <module name="futureNashorn.main" target="11" />
+      <module name="futureNashorn.test" target="11" />
+      <module name="mybatisjpadslmulticonnect" target="11" />
+      <module name="mybatisjpadslmulticonnect.main" target="11" />
+      <module name="mybatisjpadslmulticonnect.test" target="11" />
+      <module name="redisInitTest" target="11" />
+      <module name="redisInitTest.main" target="11" />
+      <module name="redisInitTest.test" target="11" />
+      <module name="redisInitTestPub" target="11" />
+      <module name="redisInitTestPub.main" target="11" />
+      <module name="redisInitTestPub.test" target="11" />
+      <module name="RefreshToken" target="11" />
+      <module name="RefreshToken.main" target="11" />
+      <module name="RefreshToken.test" target="11" />
+      <module name="SeoulOpenAPI" target="11" />
+      <module name="SeoulOpenAPI.main" target="11" />
+      <module name="SeoulOpenAPI.test" target="11" />
+      <module name="SseEmitter" target="11" />
+      <module name="SseEmitter.main" target="11" />
+      <module name="SseEmitter.test" target="11" />
+      <module name="stttextrate" target="17" />
+      <module name="stttextrate.main" target="17" />
+      <module name="stttextrate.test" target="17" />
+      <module name="swagger" target="11" />
+      <module name="swagger.main" target="11" />
+      <module name="swagger.test" target="11" />
+      <module name="wonseok" target="11" />
+      <module name="wonseok.main" target="11" />
+      <module name="wonseok.test" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
