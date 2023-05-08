@@ -20,10 +20,7 @@ public class intercepter implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        log.info("init");
         if (request.getMethod().equals("OPTIONS")) {
-            log.info("true");
-            //CORS인증 유효 처리를 위해
             return true;
         }
         return HandlerInterceptor.super.preHandle(request, response, handler);
