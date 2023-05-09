@@ -1,17 +1,17 @@
 package com.wonseok.stttextrate.biz.vo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.google.gson.Gson;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.apache.commons.lang3.stream.Streams;
 import org.apache.commons.text.similarity.*;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.stream.Stream;
 
 @Getter
@@ -62,13 +62,10 @@ public class AnalysisReportVo {
     @Schema(title = "editDistance", name = "editDistance", description = "editDistance", example = "100%")
     private String editDistance;
 
+    @JsonProperty
+    @Schema(title = "hammingDistance", name = "hammingDistance", description = "hammingDistance", example = "100%")
+    private String hammingDistance;
 
-    @JsonProperty
-    @Schema(title = "문장단위일치율", name = "sentenceRate", description = "문장단위일치율", example = "100%")
-    private String sentenceRate;
-    @JsonProperty
-    @Schema(title = "어근일치율", name = "textMeaningRate", description = "어근일치율", example = "100%")
-    private String textMeaningRate;
 
     @Builder
     public AnalysisReportVo(StringAnalysisVo val) {
@@ -86,8 +83,8 @@ public class AnalysisReportVo {
         this.cosineSimilarityRate = cosineSimilarity(val);
         this.levenshteinDistance = levenshteinDistance(val);
         this.editDistance = editDistance(val);
-        this.sentenceRate = sentenceRate;
-        this.textMeaningRate = textMeaningRate;
+        this.hammingDistance = hammingDistance(val);
+
     }
 
     private String totalCharRate(StringAnalysisVo dto) {
@@ -251,5 +248,15 @@ public class AnalysisReportVo {
         }
         return shortestDistance + "EA";
     }
+
+    private String hammingDistance(StringAnalysisVo dto) {
+        String an = dto.getAnswer().replaceAll(" ", "");
+        String stan = dto.getSttAnswer().replaceAll(" ", "");
+        return an.length() == stan.length() ? new HammingDistance().apply(an, stan) + "EA" : "MustHaveSameLength";
+    }
+
+
+
+
 
 }
