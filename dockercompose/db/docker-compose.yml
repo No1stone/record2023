@@ -1,0 +1,59 @@
+version: "3"
+
+services:
+#  java-for-SpringBootAdmin:
+#    image: amazoncorretto:11
+#    container_name: "java-for-SpringBootAdmin"
+#    restart: always
+#    command: "java -jar /main_vm/build/libs/*.jar"
+#    ports:
+#      - "8050:8050"
+#    environment:
+#      - "spring.profiles.active=dev"
+#    volumes:
+#      - ~/docker/java-for-SpringBootAdmin/app:/workspace/uplus_ui_soe/main_vm/build/libs
+#      - ~/docker/java-for-SpringBootAdmin/log/spring:/logs/was/aicb/cinnamon_ui/logs/
+
+  mysql:
+    container_name: mysql
+    image: mysql
+    restart: always
+    ports:
+      - 3308:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: UPLUS_CINNAMON
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: dev!23
+      TZ: Asia/Seoul
+    volumes:
+      - /var/lib/postgresql/data
+    networks:
+      - default
+      - mysql-net
+
+  mysql2cus:
+    container_name: mysql2cus
+    image: mysql
+    restart: always
+    ports:
+      - 3309:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: UPLUS_CINNAMON
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: dev!23
+      TZ: Asia/Seoul
+    command:
+      --sql-mode="STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
+    volumes:
+      - /var/lib/postgresql/data
+    networks:
+      - default
+      - mysql-net2
+
+networks:
+  mysql-net:
+    driver: bridge
+  mysql-net2:
+    driver: bridge

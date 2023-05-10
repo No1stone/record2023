@@ -1,0 +1,10 @@
+version: "3"
+services:
+  mettermost:
+    image: mattermost/mattermost-preview
+    restart: always
+    ports:
+      - "7010:8065"
+
+volumes:
+  db-data:
