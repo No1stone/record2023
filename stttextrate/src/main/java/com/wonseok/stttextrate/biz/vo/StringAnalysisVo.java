@@ -50,7 +50,7 @@ public class StringAnalysisVo {
     }
 
     public Long getAnswerChar() {
-        return (long)this.answer.length();
+        return (long) this.answer.length();
     }
 
     public Long getAnswerSentence() {
@@ -64,4 +64,24 @@ public class StringAnalysisVo {
     public Long getSttAnswerSentence() {
         return Arrays.stream(this.sttAnswer.split(" ")).count();
     }
+
+    public static StringAnalysisVo builder() {
+        return new StringAnalysisVo();
+    }
+
+    public StringAnalysisVo answer(String s) {
+        this.answer = s;
+        return this;
+    }
+
+    public StringAnalysisVo stt(String s) {
+        this.sttAnswer = s;
+        return this;
+    }
+
+    public StringAnalysisVo build() {
+        return this;
+    }
+
+
 }

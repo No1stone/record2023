@@ -20,6 +20,12 @@ import java.util.stream.Stream;
 public class AnalysisReportVo {
 
     @JsonProperty
+    @Schema(hidden = true)
+    private String answerOrigin;
+    @JsonProperty
+    @Schema(hidden = true)
+    private String sttAnswerOrigin;
+    @JsonProperty
     @Schema(title = "정답지", name = "answer", description = "분석한정답지", example = "정답지")
     private String answer;
     @JsonProperty
@@ -66,9 +72,18 @@ public class AnalysisReportVo {
     @Schema(title = "hammingDistance", name = "hammingDistance", description = "hammingDistance", example = "100%")
     private String hammingDistance;
 
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
+    public void setSttAnswer(String sttAnswer) {
+        this.sttAnswer = sttAnswer;
+    }
 
     @Builder
     public AnalysisReportVo(StringAnalysisVo val) {
+        this.answerOrigin = val.getAnswer();
+        this.sttAnswerOrigin = val.getSttAnswer();
         this.answer = val.getAnswer().length() > 30 ? val.getAnswer().substring(0, 30) + "..." : val.getAnswer();
         this.answerChar = val.getAnswerChar();
         this.answerSentence = val.getAnswerSentence();
@@ -256,7 +271,25 @@ public class AnalysisReportVo {
     }
 
 
-
+    public ExcelDownloadVo toExcelDownload() {
+        return ExcelDownloadVo.builder()
+                .answer(this.answerOrigin)
+                .answerChar(this.answerChar)
+                .answerSentence(this.answerSentence)
+                .sttAnswer(this.sttAnswerOrigin)
+                .sttAnswerChar(this.sttAnswerChar)
+                .sttAnswerSentence(this.sttAnswerSentence)
+                .totalCharRate(this.totalCharRate)
+                .totalSentenceRate(this.totalSentenceRate)
+                .charRate(this.charRate)
+                .jaccardSimilarityRate(this.jaccardSimilarityRate)
+                .cosineDistance(this.cosineDistance)
+                .cosineSimilarityRate(this.cosineSimilarityRate)
+                .levenshteinDistance(this.levenshteinDistance)
+                .editDistance(this.editDistance)
+                .hammingDistance(this.hammingDistance)
+                .build();
+    }
 
 
 }
