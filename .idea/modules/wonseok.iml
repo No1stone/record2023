@@ -6,6 +6,10 @@
       <excludeFolder url="file://$MODULE_DIR$/../../wonseok/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../wonseok/build" />
     </content>
+    <content url="file://$MODULE_DIR$/../../wonseok">
+      <excludeFolder url="file://$MODULE_DIR$/../../wonseok/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../wonseok/build" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

@@ -6,6 +6,10 @@
       <excludeFolder url="file://$MODULE_DIR$/../../awssdktest/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../awssdktest/build" />
     </content>
+    <content url="file://$MODULE_DIR$/../../awssdktest">
+      <excludeFolder url="file://$MODULE_DIR$/../../awssdktest/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../awssdktest/build" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

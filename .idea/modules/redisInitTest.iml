@@ -6,6 +6,10 @@
       <excludeFolder url="file://$MODULE_DIR$/../../redisInitTest/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../redisInitTest/build" />
     </content>
+    <content url="file://$MODULE_DIR$/../../redisInitTest">
+      <excludeFolder url="file://$MODULE_DIR$/../../redisInitTest/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../redisInitTest/build" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

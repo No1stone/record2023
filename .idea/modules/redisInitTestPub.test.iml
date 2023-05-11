@@ -17,6 +17,9 @@
     <content url="file://$MODULE_DIR$/../../redisInitTestPub/src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../redisInitTestPub/src/test/java" isTestSource="true" />
     </content>
+    <content url="file://$MODULE_DIR$/../../redisInitTestPub/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../redisInitTestPub/src/test/java" isTestSource="true" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="redisInitTestPub.main" />
@@ -110,5 +113,4 @@
     <orderEntry type="library" name="Gradle: org.ow2.asm:asm:9.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.objenesis:objenesis:3.2" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="redisInitTestPub.main" />
 </module>

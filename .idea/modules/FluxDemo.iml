@@ -6,6 +6,10 @@
       <excludeFolder url="file://$MODULE_DIR$/../../FluxDemo/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../FluxDemo/build" />
     </content>
+    <content url="file://$MODULE_DIR$/../../FluxDemo">
+      <excludeFolder url="file://$MODULE_DIR$/../../FluxDemo/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../FluxDemo/build" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

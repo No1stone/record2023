@@ -1,19 +1,6 @@
 version: "3"
 
 services:
-#  java-for-SpringBootAdmin:
-#    image: amazoncorretto:11
-#    container_name: "java-for-SpringBootAdmin"
-#    restart: always
-#    command: "java -jar /main_vm/build/libs/*.jar"
-#    ports:
-#      - "8050:8050"
-#    environment:
-#      - "spring.profiles.active=dev"
-#    volumes:
-#      - ~/docker/java-for-SpringBootAdmin/app:/workspace/uplus_ui_soe/main_vm/build/libs
-#      - ~/docker/java-for-SpringBootAdmin/log/spring:/logs/was/aicb/cinnamon_ui/logs/
-
   mysql:
     container_name: mysql
     image: mysql
@@ -31,7 +18,6 @@ services:
     networks:
       - default
       - mysql-net
-
   mysql2cus:
     container_name: mysql2cus
     image: mysql
@@ -52,8 +38,32 @@ services:
       - default
       - mysql-net2
 
+
+#  postgresql:
+#    container_name: postgresql
+#    image: postgres:latest
+#    restart: always
+#    ports:
+#      - 5432:5432
+#    environment:
+#      POSTGRES_DB: local
+#      POSTGRES_USER: user_me
+#      POSTGRES_PASSWORD: user_me
+#      TZ: Asia/Seoul
+#    volumes:
+#      - /var/lib/postgresql/data
+#    networks:
+#      - default
+#      - postgresql-net
+
+
+
 networks:
   mysql-net:
     driver: bridge
   mysql-net2:
+    driver: bridge
+  oracle-net:
+    driver: bridge
+  postgresql-net:
     driver: bridge

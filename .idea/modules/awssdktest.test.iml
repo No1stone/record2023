@@ -17,6 +17,9 @@
     <content url="file://$MODULE_DIR$/../../awssdktest/src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../awssdktest/src/test/java" isTestSource="true" />
     </content>
+    <content url="file://$MODULE_DIR$/../../awssdktest/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../awssdktest/src/test/java" isTestSource="true" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="awssdktest.main" />
@@ -96,5 +99,4 @@
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.objenesis:objenesis:3.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.platform:junit-platform-engine:1.8.2" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="awssdktest.main" />
 </module>

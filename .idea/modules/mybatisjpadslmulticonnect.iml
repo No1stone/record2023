@@ -6,6 +6,10 @@
       <excludeFolder url="file://$MODULE_DIR$/../../mybatisjpadslmulticonnect/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../mybatisjpadslmulticonnect/build" />
     </content>
+    <content url="file://$MODULE_DIR$/../../mybatisjpadslmulticonnect">
+      <excludeFolder url="file://$MODULE_DIR$/../../mybatisjpadslmulticonnect/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../mybatisjpadslmulticonnect/build" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
