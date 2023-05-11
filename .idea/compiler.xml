@@ -7,7 +7,7 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.26/8f8cf0372abf564913e9796623aac4c8ea44025a/lombok-1.18.26.jar" />
         </processorPath>
-        <module name="stttextrate.main" />
+        <module name="boot3java17.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +23,7 @@
       <module name="boot3java17" target="17" />
       <module name="boot3java17.main" target="17" />
       <module name="boot3java17.test" target="17" />
+      <module name="com.example.ExcelCommon" target="17" />
       <module name="ControllerAdvice" target="11" />
       <module name="ControllerAdvice.main" target="11" />
       <module name="ControllerAdvice.test" target="11" />

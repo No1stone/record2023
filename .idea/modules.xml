@@ -32,6 +32,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/boot3java17.iml" filepath="$PROJECT_DIR$/.idea/modules/boot3java17.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/boot3java17.main.iml" filepath="$PROJECT_DIR$/.idea/modules/boot3java17.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/boot3java17.test.iml" filepath="$PROJECT_DIR$/.idea/modules/boot3java17.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.ExcelCommon.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.ExcelCommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/endpointhealthcheck.iml" filepath="$PROJECT_DIR$/.idea/modules/endpointhealthcheck.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/endpointhealthcheck.main.iml" filepath="$PROJECT_DIR$/.idea/modules/endpointhealthcheck.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/endpointhealthcheck.test.iml" filepath="$PROJECT_DIR$/.idea/modules/endpointhealthcheck.test.iml" />

@@ -6,6 +6,10 @@
       <excludeFolder url="file://$MODULE_DIR$/../../RefreshToken/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../RefreshToken/build" />
     </content>
+    <content url="file://$MODULE_DIR$/../../RefreshToken">
+      <excludeFolder url="file://$MODULE_DIR$/../../RefreshToken/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../RefreshToken/build" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

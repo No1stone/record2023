@@ -18,6 +18,10 @@
       <sourceFolder url="file://$MODULE_DIR$/../../SeoulOpenAPI/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../SeoulOpenAPI/src/main/resources" type="java-resource" />
     </content>
+    <content url="file://$MODULE_DIR$/../../SeoulOpenAPI/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../SeoulOpenAPI/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../SeoulOpenAPI/src/main/resources" type="java-resource" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.18.22" level="project" />

@@ -29,6 +29,10 @@
       <sourceFolder url="file://$MODULE_DIR$/../../RefreshToken/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../RefreshToken/src/main/resources" type="java-resource" />
     </content>
+    <content url="file://$MODULE_DIR$/../../RefreshToken/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../RefreshToken/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../RefreshToken/src/main/resources" type="java-resource" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.18.20" level="project" />
