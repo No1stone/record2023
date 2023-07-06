@@ -3,21 +3,27 @@ version: "3"
 services:
 
   oracledb:
-    container_name: oracle11g
+    container_name: oracle11gtest
     image: oracleinanutshell/oracle-xe-11g:latest
     restart: always
     ports:
-      - 1522:1521
-      - 5500:5500
-    #    environment:
-    #      ORACLE_PDB: dev
-    #      ORACLE_SID: dev1
-    #      ORACLE_PWD: dev!23
-    #      ORACLE_USER: dev
+      - 1523:1521
+      - 5501:5500
+    environment:
+      - ORACLE_SID=devtestdb
+      - ORACLE_PDB=devtestdb
+      - ORACLE_PWD=devtestdbpass
+      - ORACLE_USER=devtestuser
+      - ORACLE_EDITION=EE
+      - ORACLE_BASE=/opt/oracle
+      - ORACLE_CHARACTERSET=AL32UTF8
+      - ORACLE_HOME=/opt/oracle/product/12.2.0.1/dbhome_1
     #      # oracle 이용시 기본 username = system password = oracle
     #      TZ: Asia/Seoul
     volumes:
-      - C:\Users\dlthf\Documents\dockervol:/u01/app/oracle/db/oracle-xe-11g
+      - ./oracle/oradata:/opt/oracle/oradata # persistent oracle database data.
+      - ./data-bridge:/data-bridge # just to have someplace to put data into the running container if needed
+
 #    networks:
 #      - default
 #      - oracle-net
