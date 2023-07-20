@@ -1,0 +1,101 @@
+#boot2.4 이상
+#2022-11-03 jangwonseok
+#java -jar {ARG} --spring.profiles.active=dev
+#boot2.4 이하
+#java -jar -Dspring.profiles.active=dev {ARG}
+
+
+Server:
+  shutdown: graceful
+  servlet:
+#    context-path: /BotMain_VM
+    context-path:
+#    session:
+#      timeout: 60m
+
+  error:
+    path: /error
+    include-exception: false
+#    include-stacktrace: never
+    include-stacktrace: always
+    whitelabel:
+      enabled: false
+    session:
+      tracking-modes: cookie
+    #    path:  #에러발생시 전달할 경로
+
+
+spring:
+  profiles:
+    default: local
+
+# 공통부분 작성
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  application:
+    name: botmain
+  jpa:
+    properties:
+#      hibernate:   #오라클 DB테스트하는중 공통에서 임시제외
+#        dialect: org.hibernate.dialect.MySQL57Dialect
+#        storage_engine: innodb
+        format_sql: true
+        default_batch_fetch_size: 1000
+    show_sql: true
+    format_sql: true
+    use_sql_comments: true
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  thymeleaf:
+    mode: HTML
+    cache: false
+    template-resolver-order: 0
+    check-template-location: true
+    prefix: classpath:/templates/
+  jwt:
+    secret: f2d7e5002d67c8d118ebf800274b6a5c83ed7b3d3518b2cddcd7226f7484eb34
+
+  autoconfigure:
+#    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 50MB
+logging:
+#  level:
+#    org:
+#      hibernate:
+#        SQL: debug
+#        type: trace
+    ## log4j ??????? xml ??? ????? spring ????? ???.
+    jdbc:
+      sqlonly: off
+      sqltiming: debug
+      audit: off
+      resultset: off
+      resultsettable: debug
+      connection: off
+
+
+# config server actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, info
+
+#??????? ??? yml?? ??
+#mybatis:
+#  type-aliases-package: egovframework/example/mapper/aliase
+#  mapper-locations: sqlmap/mappers/mysql/icomsys/**/*.xml
+
